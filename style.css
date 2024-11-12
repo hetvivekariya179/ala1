@@ -1,0 +1,135 @@
+body{
+		margin:0;
+		height:100vh;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		background-color:black;
+		overflow:hidden;
+}
+
+.container{
+	font-size:6px;
+	width:40em;
+	height:40em;
+	position:relative;
+}
+
+img{
+	height:130%;
+	width:130%
+}
+
+.sun{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	position:absolute;
+	top:15em;
+	left:15em;
+	width:10em;
+	height:10em;
+	border-radius:50%;
+	box-shadow:0 0 3em rgb(255,128,0);
+	animation:orbit 50s linear infinite;
+	
+}
+
+.mercury,
+.venus,.earth,.moon,.mars,.jupiter,.saturn{
+	position:absolute;
+	border-style:solid;
+	border-color: white transparent transparent transparent;
+	border-radius:0.1em o.1em 0;
+	border-radius:50%
+}
+
+.mercury{
+	top:12.5em;
+	left:12.5em;
+	width:15em;
+	height:15em;
+	animation:orbit 50s linear infinite;
+}
+
+.venus{
+	top:10em;
+	left:10em;
+	width:20em;
+	height:20em;
+	animation:orbit 50s linear infinite;
+}
+
+.earth{
+	top:6em;
+	left:6em;
+	width:28em;
+	height:28em;
+	animation:orbit 36.5s linear infinite;
+}
+
+.moon{
+	top:2em;
+	left:-1em;
+	width:7em;
+	height:7em;
+	animation:orbit 2.7s linear infinite;
+}
+
+.mercury::before,.venus::before,.earth::before,moon::before{
+	content:'';
+	position:absolute;
+	border-radius:50%;
+	animation:orbit 50s linear infinite;
+}
+
+.mercury::before{
+	top:1.5em;
+	right:0.8em;
+	width:2em;
+	height:2em;
+	background-image:url('mercury.jpg');
+	background-size:cover;
+}
+
+.venus::before{
+	top:2em;
+	right:2em;
+	width:2em;
+	height:2em;
+	background-image:url('venus.jpg');
+	background-size:cover;
+}
+.earth::before{
+	top:3em;
+	right:0em;
+	width:5em;
+	height:5em;
+	background-image:url('earth.jpg');
+	background-size:cover;
+}
+.moon::before{
+	top:0.8em;
+	right:0.2em;
+	width:3em;
+	height:3em;
+	background-image:url('moon.jpg');
+	background-size:cover;
+}
+.star{
+	position:absolute;
+	background-color:white;
+	border-radius:50%;
+	z-index:-1;
+}
+@keyframes orbit{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
